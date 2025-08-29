@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* From Uiverse.io by Yaya12085 */ 
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: green;
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: .8s;
+}
+
+#bar1 {
+  width: 50%;
+}
+
+#bar2 {
+  width: 75%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .1s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+h1{
+      font-family: "Montserrat", sans-serif !important;
+}
+p{
+      font-family: "Roboto", sans-serif;
+}
+.green{
+    color: green !important;
+}
+.green-bg{
+    background-color: rgb(1, 90, 1);
+}
+
+@media screen and (min-width:768px) {
+    .container-fluid{
+    padding: 0rem 3rem !important;
+}
+    h1{
+        font-size: 3rem !important;
+    }
+    .hero-section{
+        background-image: url('./images/digital-art-ai-technology-background.jpg');
+        height: 35rem;       
+        background-size: cover;
+        background-color: rgb(83, 83, 83);
+        background-blend-mode: overlay;
+    }
+    .about-img{
+        height: 20rem;
+    }
+    .skill-box{
+        height: 25rem !important;
+    }
+}
+@media screen and (max-width:768px) {
+    .container-fluid{
+    padding: 0rem 2rem !important;
+}
+    h1{
+        font-size: 3rem !important;
+    }
+     .hero-section{
+        background-image: url('./images/digital-art-ai-technology-background.jpg');
+        height: 30rem;       
+        background-size: cover;
+        background-color: rgb(83, 83, 83);
+        background-blend-mode: overlay;
+    }
+     .about-img{
+        height: 20rem;
+    }
+    .skill-box{
+        height: 20rem !important;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Tablet-specific fixes */
+     .container-fluid{
+    padding: 0rem 1.5rem !important;
+}
+    .skill-box{
+        height: 28rem !important;
+    }
+    .tab-about{
+        display: flex !important;
+        flex-direction: column !important;
+        border: 1px solid red;
+    }
+     .about-img{
+        height: 20rem;
+        width: 100% !important;
+    }
+}
+
+
